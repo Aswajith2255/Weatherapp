@@ -1,0 +1,39 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Default Theme (Cloudy / Default) */
+  --bg-primary: #324558;
+  --bg-card: rgba(255, 255, 255, 0.1);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --accent: #ffffff;
+}
+
+/* Dynamic Weather Backgrounds */
+body[data-weather="clear"] { --bg-primary: #f59e0b; } /* Sunny = Warm Amber */
+body[data-weather="rain"], body[data-weather="showers"], body[data-weather="drizzle"] { --bg-primary: #3b82f6; } /* Rain = Blue */
+body[data-weather="snow"] { --bg-primary: #86efac; --text-primary: #064e3b; --text-secondary: rgba(6, 78, 59, 0.7); --bg-card: rgba(6, 78, 59, 0.1); } /* Snow = Light Green */
+body[data-weather="storm"] { --bg-primary: #475569; } /* Storm = Gray */
+body[data-weather="fog"] { --bg-primary: #d6d3d1; --text-primary: #1c1917; --text-secondary: rgba(28, 25, 23, 0.7); --bg-card: rgba(0, 0, 0, 0.05); } /* Fog = Beige */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

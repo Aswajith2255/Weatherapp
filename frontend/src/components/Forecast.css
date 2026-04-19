@@ -1,0 +1,78 @@
+.forecast-card-mobile {
+  background: var(--bg-card);
+  border-radius: 24px;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.forecast-header {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.calendar-icon {
+  font-size: 1rem;
+}
+
+.forecast-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.forecast-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-primary);
+}
+
+.day-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.list-icon {
+  width: 30px;
+  height: 30px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+.day-name {
+  font-weight: 500;
+  width: 75px; 
+}
+
+.day-condition {
+  font-weight: 400;
+  color: var(--text-primary);
+}
+
+.temps {
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.full-forecast-btn {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08); /* slight highlight */
+  border: none;
+  color: var(--text-primary);
+  padding: 14px 0;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.full-forecast-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
